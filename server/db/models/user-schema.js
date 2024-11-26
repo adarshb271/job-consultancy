@@ -48,7 +48,7 @@ const userSchema = mongoose.Schema(
         },
         confirmpassword: {
             type: String,
-            required: true,  // Making confirmpassword required for validation
+            // required: true,  // Making confirmpassword required for validation
         },
         role: {
             type: String,

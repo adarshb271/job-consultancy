@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from '../../utils/axois';
+import axios from '../../utils/axios';
 import { Link } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css'
 import { useNavigate, useParams } from 'react-router-dom';
