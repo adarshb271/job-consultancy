@@ -1,0 +1,114 @@
+/* .userhome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .userdashbox {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .jobs-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .job-card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .job-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .job-card p {
+    margin: 5px 0;
+  }
+   */
+   /* Global styles for the layout */
+.userhome {
+    display: flex; /* Create a flexbox layout */
+    min-height: 100vh; /* Ensure it takes up the full viewport height */
+    background-color: #f4f4f4;
+  }
+  
+  /* Sidebar styling */
+  .userhome .sidebar {
+    width: 250px; /* Set the sidebar width */
+    background-color: #333; /* Sidebar background color */
+    color: white;
+    padding: 20px;
+    position: fixed; /* Fix the sidebar on the left */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: auto; /* Allow scrolling if the content exceeds the viewport height */
+  }
+  
+  /* Main content area */
+  .userhome .main-content {
+    margin-left: 250px; /* Make space for the sidebar */
+    padding: 20px;
+    width: 100%; /* Take up the remaining space */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the content */
+  }
+  
+  .jobs-container {
+    width: 100%;
+    max-width: 800px; /* Limit the width of the jobs container */
+  }
+  
+  .job-card {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .job-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .job-card p {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+  /* Add this to your existing userhome.css */
+
+/* Apply Button */
+.apply-btn {
+    background-color: #007bff; /* Blue background color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .apply-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  .apply-btn:active {
+    background-color: #004085; /* Even darker blue on click */
+  }
+  

@@ -1,0 +1,138 @@
+/* .usersidebar {
+    width: 20%;
+    height: 100vh;
+    background-color: rgb(75, 65, 219);
+    padding: 20px;
+  }
+  .usersidebar .details {
+    width: 90%;
+    background-color: rgb(127, 127, 224);
+    border-radius: 5px;
+    height: 100px;
+    color: white;
+    padding: 10px;
+    display: flex;
+  }
+  .usersidebar .contents {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 30px;
+  }
+  .usersidebar .contents p {
+    padding: 10px;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+    font-size: 10px;
+  }
+  .usersidebar .contents p:hover {
+    padding: 10px;
+    background-color: red;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 10px;
+  }
+  .usersidebar .details .name {
+    font-size: 12px;
+    margin-top: 3px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .usersidebar .details img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
+  .link {
+    text-decoration: inherit;
+    color: inherit;
+  }
+   */
+
+
+
+ /* Main container for the user dashboard */
+.user-dashboard {
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Sidebar styling */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .details {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .usercontent p {
+    margin: 5px 0;
+    font-size: 16px;
+  }
+  
+  .contents {
+    width: 100%;
+  }
+  
+  .link {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .link:hover {
+    background-color: #555;
+  }
+  
+  .logout {
+    color: #e74c3c;
+    cursor: pointer;
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  .logout:hover {
+    color: #c0392b;
+  }
+  
+  /* Main content area */
+  .main-content {
+    margin-left: 250px; /* Match sidebar width */
+    padding: 40px;
+    width: calc(100% - 250px); /* Adjust to fill the remaining space */
+    background-color: #f4f4f4;
+    min-height: 100vh; /* Ensure content fills the viewport */
+  }
+  
+  .main-content h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .main-content p {
+    font-size: 16px;
+    color: #555;
+  }
+  

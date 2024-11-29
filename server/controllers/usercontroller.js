@@ -13,55 +13,7 @@ module.exports.getUser = async (req, res) => {
 
 
 
-  // module.exports.signupUser = async (req, res) => {
-  //   try {
-  //     const user = await User.findOne({ email: req.body.email });
-  //     if (user) {
-  //       return res
-  //         .status(403)
-  //         .json({ message: 'Email already exited please take new one' });
-  //     }
-  
-  //     const hpassword = await bcrypt.hash(req.body.password, 10);
-  
-  //     const response = await User.create({
-  //       ...req.body,
-  //       password: hpassword,
-  //     });
-  
-  //     let transporter = nodemailer.createTransport({
-  //       service: 'gmail',
-  //       auth: {
-  //         user: process.env.MAIL,
-  //         pass: process.env.PASSWORD,
-  //       },
-  //     });
-  
-  //     let mailOptions = {
-  //       from: process.env.MAIL,
-  //       to: req.body.email,
-  //       subject: 'Login creds for DocBooking App',
-  //       text: `your emailID is :${req.body.email} and ur password is :${req.body.password}`,
-  //     };
-  
-  //     transporter.sendMail(mailOptions, error => {
-  //       if (error) {
-  //         console.log('Email error:', error);
-  //         console.log(error);
-  //         return res.status(404).json({ ErrorOccurred: error });
-  //       } else {
-  //         return res.status(201).json({ message: 'Mail Send', value: response });
-  //       }
-  //     });
-  //   } catch (err) {
-  //     console.log('Signup error:', err);
-  
-  //     res
-  //       .status(500)
-  //       .json({ message: 'Server error during signup', error: err.message });
-  //   }
-  // };
-
+ 
 
   
   module.exports.signupUser = async (req, res) => {
@@ -168,5 +120,25 @@ module.exports.applyForJob = async (req, res) => {
   } catch (error) {
       console.error('Error applying for job:', error);
       res.status(500).json({ message: 'Server error', error });
+  }
+};
+
+
+module.exports.getUserById = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const user = await User.findById(id);
+    res.status(201).json(user);
+  } catch (e) {
+    return res.status(500).json(e);
+  }
+};
+module.exports.getPostedJobs = async (req, res) => {
+  try {
+    const jobs = await Job.find(); // Fetch all jobs from the database
+    res.status(200).json(jobs); // Send jobs as JSON response
+  } catch (error) {
+    console.error('Error fetching posted jobs:', error);
+    res.status(500).json({ message: 'Failed to fetch jobs' });
   }
 };

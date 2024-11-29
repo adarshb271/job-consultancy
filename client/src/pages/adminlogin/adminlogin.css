@@ -1,0 +1,110 @@
+/* General Layout */
+.adminbackgroundimage {
+    background-color: #f0f2f5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Login Form Styling */
+  .login {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .login h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #1890ff;
+  }
+  
+  /* Input Fields */
+  .emailcontainer, .passwordcontainer {
+    margin-bottom: 20px;
+  }
+  
+  .emailcontainer label, .passwordcontainer label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .emailcontainer input, .passwordcontainer input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .emailcontainer input:focus, .passwordcontainer input:focus {
+    border-color: #1890ff;
+    outline: none;
+  }
+  
+  /* Button */
+  .adminlogin{
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: white;
+    background-color: #1890ff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #40a9ff;
+  }
+  
+  button:active {
+    background-color: #096dd9;
+  }
+  
+  /* Link Section */
+  p {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  p a {
+    color: #1890ff;
+    text-decoration: none;
+  }
+  
+  p a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Error Message Styling */
+  .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 600px) {
+    .login {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .login h1 {
+      font-size: 20px;
+    }
+  
+    .emailcontainer input, .passwordcontainer input, button {
+      font-size: 14px;
+    }
+  }
+  

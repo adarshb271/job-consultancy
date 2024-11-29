@@ -7,34 +7,55 @@ const Navbar = () => {
 
   const navigate = useNavigate();
 
-  return (
+  return(
     <div className="navbar">
-    <div className="navbar-logo">
-      <h2>Admin Panel</h2>
+        <div className="navmain">
+<div className="logo">
+<img src="" alt="" />
+
+</div>
+<div className="details">
+<ul  onClick={()=>{
+navigate(`/`)
+} }>Home</ul>
+
+{/* <ul  onClick={()=>{
+navigate(`/login`)
+}  }>Candidate</ul> */}
+
+<ul onClick={()=>{
+navigate(`/service`)
+} }>Employer</ul>
+<ul onClick={()=>{
+navigate(`/adminlogin`)
+} }>Admin</ul>
+
+
+{/* <button className="btn btn-primary">Signup</button> */}
+<button onClick={()=>{
+navigate(`/login`)
+} }  className="buttonlogin">Login</button>
+<button onClick={()=>{
+navigate(`/user/signup`)
+} }  className="buttonregister">Register</button>
+
+</div>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
     </div>
-    <ul className="navbar-menu">
-
-    <li>
-        <a href="/">Home</a>
-      </li>
-      
-      <li>
-        <a href="/">Admin</a>
-      </li>
-      <li>
-        <a href="/login">Candicate</a>
-      </li>
-      
-    </ul>
-    <div className="navbar-buttons">
-        <button className="btn register-btn">Register</button>
-
-        <button onClick={()=>{
-          navigate(`/login`)
-        }} className="btn login-btn">Login</button>
-      </div>
-  </div>
-  );
+)
 };
 
 export default Navbar;
