@@ -1,8 +1,9 @@
 import './adminhome.css'
+import Sidebar from '../../components/admindashboard'
 const Adminhome=()=>{
     return(
 <div className="adminhome">
-    <h1>Adminhome</h1>
+    <Sidebar/>
 </div>
 
     )

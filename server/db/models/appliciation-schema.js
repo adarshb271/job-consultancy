@@ -1,71 +1,9 @@
-// const mongoose = require('mongoose');
 
-// // Define the application schema
-// const appilicationSchema = mongoose.Schema(
-//   {
-//     firstname: {
-//       type: String,
-//     //   required: true,
-//       trim: true,
-//     },
-//     lastname: {
-//       type: String,
-//     //   required: true,
-//       trim: true,
-//     },
-//     email: {
-//       type: String,
-//     //   required: true,
-//       unique: true,
-//       trim: true,
-//     },
-//     password: {
-//       type: String,
-//     //   required: true,
-//     //   minlength: 6,
-//     },
-//     mobilenumber: {
-//       type: String,
-//     //   required: true,
-//     //   unique: true,
-//       trim: true,
-//     },
-//     DOB: {
-//       type: Date,
-//     //   required: true,
-//     },
-//     gender: {
-//       type: String,
-//       enum: ['Male', 'Female', 'Other'],
-//     //   required: true,
-//     },
-//     address: {
-//       type: String,
-//     //   required: true,
-//       trim: true,
-//     },
-//     confirmpassword: {
-//       type: String,
-//     },
-//     role: {
-//       type: String,
-//       enum: ['admin', 'employee', 'user'],
-//       default: 'user',
-//     },
-//   },
-//   { timestamps: true }
-// );
-
-// // Check if the Application model already exists before defining it
-// const Application = mongoose.models.Application || mongoose.model('Application', appilicationSchema);
-
-// module.exports = Application;
 
 
 
 const mongoose = require('mongoose');
 
-// Define the application schema
 const applicationSchema = mongoose.Schema(
   {
     firstname: {
@@ -73,16 +11,12 @@ const applicationSchema = mongoose.Schema(
       // required: true,
       trim: true,
     },
-    lastname: {
-      type: String,
-      // required: true,
-      trim: true,
-    },
+   
     email: {
       type: String,
       // required: true,
       unique: true,
-      trim: true,
+      // trim: true,
     },
     mobilenumber: {
       type: String,
@@ -95,7 +29,7 @@ const applicationSchema = mongoose.Schema(
     },
     gender: {
       type: String,
-      enum: ['Male', 'Female', 'Other'],
+      // enum: ['Male', 'Female', 'Other'],
       // required: true,
     },
     address: {
@@ -103,7 +37,43 @@ const applicationSchema = mongoose.Schema(
       // required: true,
       trim: true,
     },
-    resume: {
+
+    panchayath: {
+      type: String,
+      // required: true,
+      trim: true},
+      
+      district: {
+        type: String,
+        // required: true,
+        trim: true},
+    
+    pincode: {
+      type: String,
+      // required: true,
+      trim: true},
+     state: {
+        type: String,
+        // required: true,
+        // trim: true
+      },
+       currentlocation: {
+          type: String,
+          // required: true,
+          trim: true},
+         experience: {
+            type: String,
+            // required: true,
+            trim: true},
+           qualification: {
+              type: String,
+              // required: true,
+              trim: true},
+            skills: {
+                type: String,
+                // required: true,
+                trim: true},
+   file: {
       type: String,
       // required: true,
     },
