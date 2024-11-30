@@ -41,7 +41,7 @@ const Admindashbox = () => {
 
         <nav className="contents">
           <p>
-            <NavLink className="link" to="/admin/home">
+            <NavLink className="link" to="/adminhome">
               Dashboard
             </NavLink>
           </p>

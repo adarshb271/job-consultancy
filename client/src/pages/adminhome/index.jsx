@@ -4,6 +4,7 @@ const Adminhome=()=>{
     return(
 <div className="adminhome">
     <Sidebar/>
+
 </div>
 
     )

@@ -1,71 +1,115 @@
-/* Full-Screen Container for the Form */
-.application-form-container {
-    height: 100vh; /* Full screen height */
-    width: 100%; /* Full screen width */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0;
-    margin: 0;
+/* General page styling */
+.body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f8fa;
+  margin: 0;
+  padding: 0;
+  height: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container for the form */
+.application-container {
+  width: 80%;
+  max-width: 1200px;  /* Increased width to take advantage of the landscape layout */
+  margin: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Header Styling */
+.application-title {
+  text-align: center;
+  color: #333;
+  font-size: 24px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Success/Failure message styling */
+.application-message {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+}
+
+.application-message.success {
+  color: green;
+}
+
+.application-message.error {
+  color: red;
+}
+
+/* Form Styling */
+.application-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  width: 48%;  /* Each input takes up almost half of the form container */
+}
+
+label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #5e81f4;
+}
+
+/* Submit Button */
+.form-submit-btn {
+  background-color: #5e81f4;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.form-submit-btn:hover {
+  background-color: #4b74c4;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 800px) {
+  .application-container {
+    width: 90%;
   }
-  
-  .application-form {
-    width: 100%;
-    max-width: 800px; /* Form width */
-    padding: 30px;
-    background-color: white;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
+
+  .form-group {
+    width: 100%;  /* Full width for smaller screens */
   }
-  
-  .application-form h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 30px;
-    color: #333;
+
+  .form-submit-btn {
+    width: 100%;  /* Ensure the button spans full width */
   }
-  
-  /* Form Labels */
-  .application-form label {
-    display: block;
-    margin-bottom: 15px;
-    font-size: 16px;
-    color: #555;
-  }
-  
-  /* Input Fields Styling */
-  .application-form input,
-  .application-form select,
-  .application-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-top: 5px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  
-  .application-form textarea {
-    height: 100px;
-    resize: vertical;
-  }
-  
-  /* Button Styling */
-  .application-form button {
-    padding: 12px 20px;
-    background-color: #007bff;
-    color: white;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    transition: background-color 0.3s ease;
-  }
-  
-  .application-form button:hover {
-    background-color: #0056b3;
-  }
-  
+}
