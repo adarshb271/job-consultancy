@@ -4,7 +4,7 @@ import { Navigate, useNavigate } from 'react-router-dom';
 import React from 'react';
 import { Button, Flex } from 'antd';
 
-// import Footer from '../../components/footer';
+ import Footer from '../../components/footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Home=()=>{
@@ -78,9 +78,39 @@ navigate(`/postjob`)
     <img src="./images/content2.jpg" alt="" />
   </div>
 </div>
+<div className="aboutus">
+<div className="aboutleft">
+  <h2>About Us</h2>
+  <p>
 
 
-{/* <Footer/> */}
+JobBiz Solution is a not-for-profit organisation dedicated to building careers. We do so by helping young individuals develop careers through traineeships, apprenticeships, and other educational opportunities.
+
+We are leaders in recruitment, ensuring the right apprentice/trainee for the right job. We employ and mentor our apprentices and trainees, guiding them to a pathway of success, exceeding industry standards, and maximising their career prospects. Our clients are cared for with our integrity, passion for quality, and exceptional service. We stand apart from the rest with our strong reputation in the market and amongst employers.
+
+JobBiz Solution has helped hundreds of individuals and businesses strive for and reach success. Will you be the next?</p>
+
+</div>
+<div className="aboutright">
+<img src="./images/aboutimg.jpg" alt="" />
+</div>
+</div>
+<div className="location">
+<iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3912.5090883380293!2d76.6586513!3d10.7674156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba86de8b355607f:0x1aac71ac26825e03!2sNSS+Taluk+Union+Building,+FORT+MAIDAN,+Kerala+678001!5e0!3m2!1sen!2sin!4v1698234567890!5m2!1sen!2sin"
+  width="95%"
+  height="400"
+  style={{ border: '0' }}
+  allowFullScreen=""
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+/>
+
+
+
+</div>
+
+<Footer/>
 
 </div>
 

@@ -33,12 +33,12 @@ navigate(`/adminlogin`)
 
 
 {/* <button className="btn btn-primary">Signup</button> */}
-<button onClick={()=>{
+{/* <button onClick={()=>{
 navigate(`/login`)
 } }  className="buttonlogin">Login</button>
 <button onClick={()=>{
 navigate(`/user/signup`)
-} }  className="buttonregister">Register</button>
+} }  className="buttonregister">Register</button> */}
 
 </div>
 
