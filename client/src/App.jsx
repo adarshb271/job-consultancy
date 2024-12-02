@@ -9,6 +9,7 @@ import Adminlogin from './pages/adminlogin';
 import Postedjob from './pages/postedjobs';
 import Application from './pages/applicationform';
 import Candidatedetails from './pages/candidatedetails'
+import Postjob from './pages/post a job';
 import './App.css'
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
 <Route path="/adminlogin" element={<Adminlogin/>} /> 
 <Route path="/adminhome" element={<Adminhome/>} /> 
 <Route path="/postedjob" element={<Postedjob/>} /> 
-<Route path="/applicationform" element={<Application/>} /> 
+<Route path="/postjob" element={<Postjob/>} /> 
 
 <Route path="/candidatedetails" element={<Candidatedetails/>} /> 
 

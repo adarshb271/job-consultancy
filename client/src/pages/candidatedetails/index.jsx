@@ -1,8 +1,9 @@
-import './candidate.css'; // Make sure to import your CSS file for styling
+import './candidate.css';
 import Navbar from '../../components/navbar';
 import React, { useEffect, useState } from 'react';
+import { Button, ConfigProvider, Flex } from 'antd';
 
-import axios from '../../utils/axios'; // Assuming axios is set up
+import axios from '../../utils/axios'; 
 
 const SubmittedApplications = () => {
   const [applications, setApplications] = useState([]);
@@ -19,6 +20,26 @@ const SubmittedApplications = () => {
 
     fetchApplications();
   }, []);
+  const handleDelete = async (id) => {
+    console.log('Deleting application with ID:', id); // Debugging log
+    try {
+      const confirmDelete = window.confirm('Are you sure you want to delete this application?');
+      if (!confirmDelete) return;
+  
+      const response = await axios.delete(`http://localhost:8000/application/${id}`);
+      console.log('Delete response:', response.data); // Debugging log
+  
+      setApplications((prevApplications) =>
+        prevApplications.filter((application) => application._id !== id)
+      );
+  
+      alert('Application deleted successfully!');
+    } catch (error) {
+      console.error('Error deleting application:', error.response?.data || error.message);
+      alert('Failed to delete application. Please try again.');
+    }
+  };
+  
 
   return (
     <div className="submittedApplications">
@@ -46,7 +67,13 @@ const SubmittedApplications = () => {
                 <p><strong>Education:</strong> {application.qualification}</p>
                 <p><strong>Current location:</strong> {application.location}</p>
                 <p><strong>Posted On:</strong> {new Date(application.createdAt).toLocaleDateString()}</p>
+                
                 <p><strong>File:</strong> {application.file ? <a href={application.file} target="_blank" rel="noopener noreferrer">View File</a> : 'No file uploaded'}</p>
+              
+                <Button onClick={() => handleDelete(application._id)} color="default" variant="dashed">
+           Delete
+          </Button>
+
               </div>
             ))
           ) : (

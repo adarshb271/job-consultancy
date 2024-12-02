@@ -1,0 +1,53 @@
+.jobs-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 20px;
+
+    max-width: 800px; /* Limit the width of the jobs container */
+  }
+  .main-content{
+    width: 1500px;
+    margin-left: 0px;
+  }
+  
+  .job-card {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .job-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .job-card p {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+  /* Add this to your existing userhome.css */
+
+/* Apply Button */
+.apply-btn {
+    background-color: #007bff; /* Blue background color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .apply-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  .apply-btn:active {
+    background-color: #004085; /* Even darker blue on click */
+  }
+  

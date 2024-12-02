@@ -5,6 +5,6 @@ const router = express.Router();
 
 router.post('/signupadmin',controller.signupAdmin)
 router.post('/loginadmin',controller.loginAdmin)
-router.post('/postjob',adminAuthMiddleware,controller.addNewJob)
+// router.post('/postjob',adminAuthMiddleware,controller.addNewJob)
 
 module.exports=router

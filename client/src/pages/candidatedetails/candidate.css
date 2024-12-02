@@ -1,10 +1,13 @@
 .submittedApplications .main-content {
     padding: 20px;
+    width: 1500px;
+    margin-left: 0px;
   }
   
   .applications-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+ ;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
     gap: 20px;
   }
   
@@ -18,7 +21,7 @@
   }
   
   .application-card:hover {
-    transform: scale(1.05); /* Hover effect to enlarge the card */
+    transform: scale(1.05); 
   }
   
   .application-card h2 {

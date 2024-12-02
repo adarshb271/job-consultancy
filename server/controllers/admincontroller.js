@@ -80,31 +80,32 @@ module.exports.loginAdmin = async (req, res) => {
 // };
 
 
-module.exports. addNewJob = async (req, res) => {
-  try {
-      const { title, description, requirements, salary, location, company } = req.body;
+// module.exports. addNewJob = async (req, res) => {
+//   try {
+//       const { name,title, description, requirements, salary, location, company } = req.body;
 
-      // Validate required fields
-      if (!title || !description || !requirements || !salary || !location || !company) {
-          return res.status(400).json({ message: 'All fields are required.' });
-      }
+//       // Validate required fields
+//       if (!title || !description || !requirements || !salary || !location || !company) {
+//           return res.status(400).json({ message: 'All fields are required.' });
+//       }
 
-      // Create a new job instance
-      const newJob = new Job({
-          title,
-          description,
-          requirements,
-          salary,
-          location,
-          company,
-      });
+//       // Create a new job instance
+//       const newJob = new Job({
+//         name,
+//           title,
+//           description,
+//           requirements,
+//           salary,
+//           location,
+//           company,
+//       });
 
-      // Save the job to the database
-      const savedJob = await newJob.save();
+//       // Save the job to the database
+//       const savedJob = await newJob.save();
 
-      // Respond with the saved job
-      res.status(201).json({ message: 'Job added successfully.', job: savedJob });
-  } catch (error) {
-      res.status(500).json({ message: 'Error adding job.', error: error.message });
-  }
-};
+//       // Respond with the saved job
+//       res.status(201).json({ message: 'Job added successfully.', job: savedJob });
+//   } catch (error) {
+//       res.status(500).json({ message: 'Error adding job.', error: error.message });
+//   }
+// };
