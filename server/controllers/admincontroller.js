@@ -56,56 +56,9 @@ module.exports.loginAdmin = async (req, res) => {
     res.status(200).json({ message: 'You Are Logged In', token, id: admin._id });
   };
 
-
-// module.exports.updateJobProfile = async (req, res) => {
-//     try {
-//         const { jobId } = req.params; 
-//         const { title, description, requirements, salary, location, company } = req.body;
-
-//         const updatedJob = await Job.findByIdAndUpdate(
-//             jobId,
-//             { title, description, requirements, salary, location, company, updatedAt: Date.now() },
-//             { new: true, runValidators: true }
-//         );
-
-//         if (!updatedJob) {
-//             return res.status(404).json({ message: 'Job profile not found.' });
-//         }
-
         
-//         res.status(200).json({ message: 'Job profile updated successfully.', updatedJob });
-//     } catch (error) {
-//         res.status(500).json({ message: 'Error updating job profile.', error: error.message });
-//     }
-// };
-
-
-// module.exports. addNewJob = async (req, res) => {
-//   try {
-//       const { name,title, description, requirements, salary, location, company } = req.body;
-
-//       // Validate required fields
-//       if (!title || !description || !requirements || !salary || !location || !company) {
-//           return res.status(400).json({ message: 'All fields are required.' });
-//       }
-
-//       // Create a new job instance
-//       const newJob = new Job({
-//         name,
-//           title,
-//           description,
-//           requirements,
-//           salary,
-//           location,
-//           company,
-//       });
-
-//       // Save the job to the database
-//       const savedJob = await newJob.save();
-
-//       // Respond with the saved job
-//       res.status(201).json({ message: 'Job added successfully.', job: savedJob });
-//   } catch (error) {
-//       res.status(500).json({ message: 'Error adding job.', error: error.message });
-//   }
-// };
+  
+ 
+  
+ 
+  

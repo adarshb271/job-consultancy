@@ -6,6 +6,7 @@ const router = express.Router();
 
 
 router.get('/posted',controller. getPostedJobs);
+// router.delete('/:id',controller.deleteJob)
 
 
 module.exports=router

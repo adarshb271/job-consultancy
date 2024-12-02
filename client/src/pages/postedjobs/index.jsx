@@ -1,6 +1,9 @@
 import './postedjob.css'
-import Navbar from '../../components/navbar'
+// import Navbar from '../../components/navbar'
+import Adminnavbar from '../../components/adminnavbar'; 
 import React, { useEffect, useState } from 'react';
+import { Button, ConfigProvider, Flex } from 'antd';
+
 import axios from '../../utils/axios'; 
 
 const Postedjob = ()=>{
@@ -19,9 +22,10 @@ const Postedjob = ()=>{
       fetchPostedJobs();
     }, []);
   
+  
 return(
     <div className="postedjob">
-        <Navbar/>
+        <Adminnavbar/>
         <div className="main-content">
       <h1>Posted Jobs</h1>
       <div className="jobs-container">
@@ -40,7 +44,7 @@ return(
               <p><strong>phone number:</strong> {job.phonenumber}</p>
               <p><strong>Skills:</strong> {job.skills}</p>
               <p><strong>No Of Vaccency:</strong> {job.noofvaccency}</p>
-             
+          
              
               {/* <button className="apply-btn" Lin>
                   Apply

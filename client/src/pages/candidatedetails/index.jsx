@@ -1,8 +1,8 @@
 import './candidate.css';
-import Navbar from '../../components/navbar';
+// import Navbar from '../../components/navbar';
 import React, { useEffect, useState } from 'react';
 import { Button, ConfigProvider, Flex } from 'antd';
-
+import Adminnavbar from '../../components/adminnavbar';
 import axios from '../../utils/axios'; 
 
 const SubmittedApplications = () => {
@@ -43,7 +43,7 @@ const SubmittedApplications = () => {
 
   return (
     <div className="submittedApplications">
-
+<Adminnavbar/>
 
       <div className="main-content">
      

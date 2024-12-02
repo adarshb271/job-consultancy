@@ -24,8 +24,9 @@ navigate(`/login`)
 }  }>Candidate</ul> */}
 
 <ul onClick={()=>{
-navigate(`/service`)
+navigate(`/employerhome`)
 } }>Employer</ul>
+
 <ul onClick={()=>{
 navigate(`/adminlogin`)
 } }>Admin</ul>
