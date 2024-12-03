@@ -11,7 +11,7 @@ const Userhome = () => {
   useEffect(() => {
     const fetchPostedJobs = async () => {
       try {
-        const response = await axios.get('/job/posted'); // Update the endpoint as per your backend
+        const response = await axios.get('/job/posted'); 
         setPostedJobs(response.data);
       } catch (error) {
         console.error('Error fetching posted jobs:', error);
@@ -21,11 +21,6 @@ const Userhome = () => {
     fetchPostedJobs();
   }, []);
 
-//   const handleApply = (jobId) => {
-//     // You can replace this with any functionality you want
-//     console.log('Applying for job with ID:', jobId);
-//     // For example, you could navigate to a job application form or send an API request
-//   };
 
   return (  <div className="userhome">
     {/* Sidebar */}

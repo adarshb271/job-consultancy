@@ -26,7 +26,7 @@ const Home=()=>{
 navigate(`/applicationform`)
 } } type="button" class="btn btn-link">Submit Your CV</button>
   </div>
-  <div className="homeright"><img className='homerightimg' src="./images/actng.jpeg" alt="" /></div>
+  <div className="homeright"><img className='homerightimg' src="./images/job1.jpg" alt="" /></div>
 </div>
 <div className="homejobcontainer">
 <div className="finance">
@@ -84,7 +84,7 @@ navigate(`/postjob`)
   <p>
 
 
-JobBiz Solution is a not-for-profit organisation dedicated to building careers. We do so by helping young individuals develop careers through traineeships, apprenticeships, and other educational opportunities.
+JOBBIZ Solution is a not-for-profit organisation dedicated to building careers. We do so by helping young individuals develop careers through traineeships, apprenticeships, and other educational opportunities.
 
 We are leaders in recruitment, ensuring the right apprentice/trainee for the right job. We employ and mentor our apprentices and trainees, guiding them to a pathway of success, exceeding industry standards, and maximising their career prospects. Our clients are cared for with our integrity, passion for quality, and exceptional service. We stand apart from the rest with our strong reputation in the market and amongst employers.
 

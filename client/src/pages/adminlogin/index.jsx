@@ -4,6 +4,8 @@ import { useState } from 'react';
 import axios from '../../utils/axios';
 import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
+import Navbar from '../../components/navbar'
+import Footer from '../../components/footer'
 import './adminlogin.css';
 
 const AdminLogin = () => {
@@ -39,7 +41,7 @@ const AdminLogin = () => {
   return (
     <div className="adminbackgroundimage">
       <ToastContainer />
-
+      <Navbar />
       <div className="login">
         <h1>Admin Login</h1>
         <div className="emailcontainer">
@@ -56,6 +58,7 @@ const AdminLogin = () => {
         <Button className='adminlogin' onClick={onLogin}>Login</Button>
        
       </div>
+      <Footer />
     </div>
   );
 };

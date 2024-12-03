@@ -10,21 +10,42 @@ position: fixed; */
 }
 .navmain{
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 
 }
 .logo{
   margin-left: 200px;
-  margin-top: 20px;
-  width: 150px;
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: black; */
+  /* margin-top: 10px; */
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  height: 90px;
+  
+  h6{
+   font-size: xx-large;
+    color: antiquewhite;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  p{
+    margin-top: -10px;
+    margin-left: 10px;
+    color: antiquewhite;
+
+  }
+
+  
 }
 .details{
-  margin-top: -40px;
-  color:white;
-  /* background-color: bisque; */
+  margin-top: 10px;
+  color: antiquewhite;
+
+  
   display: flex;
   font-weight: bold;
   justify-content: center;
@@ -36,12 +57,12 @@ margin-left: 500px;
   border-radius: 30px;
   font-style: italic;
 }
-.signup{
+/* .signup{
   background-color: beige;
   display: flex;
   justify-content: end;
-}
-.buttonlogin{
+} */
+/* .buttonlogin{
   border-radius: 30px;
   margin-top: -11px;
   width: 200px;
@@ -61,7 +82,7 @@ margin-left: 500px;
   background-color: rgb(53, 214, 32);
   color: aliceblue;
   margin-left: 30px;
-}
+} */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;

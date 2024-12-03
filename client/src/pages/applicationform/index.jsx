@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react';
 import axios from 'axios';
+import Navbar from '../../components/navbar';
+import Footer from '../../components/footer';
 import './application.css'; 
 
 const ApplicationForm = () => {
@@ -65,6 +67,7 @@ const ApplicationForm = () => {
 
   return (
     <div className="application-container">
+      <Navbar/>
       <h1 className="application-title">Application Form</h1>
       {message && <p className="application-message">{message}</p>}
       <form onSubmit={handleSubmit} encType="multipart/form-data" className="application-form">
@@ -238,6 +241,7 @@ const ApplicationForm = () => {
           <button type="submit" className="form-submit-btn">Submit Application</button>
         </div>
       </form>
+      <Footer/>
     </div>
   );
 };

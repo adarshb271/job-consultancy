@@ -1,8 +1,8 @@
   import './postjob.css'
 
 import React, { useState } from 'react';
- 
-
+import Navbar from '../../components/navbar'; 
+import Footer from '../../components/footer';
 import axios from 'axios';
 
 const PostJobForm = () => {
@@ -39,6 +39,7 @@ const PostJobForm = () => {
 
   return (
     <div className="postjob">
+      <Navbar />
       <h2>Post a Job</h2>
       <form onSubmit={handleSubmit}>
         <input
@@ -129,6 +130,7 @@ const PostJobForm = () => {
         />
         <button type="submit">Post Job</button>
       </form>
+      <Footer />
     </div>
   );
 };

@@ -19,17 +19,14 @@ const AdminSignUp = () => {
     confirmPassword: '',
   });
 
-  // Handle input change
   const onChange = (e, key) => {
     setSignup({ ...signup, [key]: e.target.value });
   };
 
-  // Admin sign up handler
   const onSignupBtn = async () => {
     setIsSubmitting(true);
     setError(null);
 
-    // Check if passwords match
     if (signup.password !== signup.confirmPassword) {
       toast.error('Passwords do not match!');
       setIsSubmitting(false);
@@ -38,12 +35,12 @@ const AdminSignUp = () => {
 
     try {
       console.log('Attempting Admin Signup...');
-      const response = await axios.post('/admin/signup', signup); // Change the endpoint accordingly
+      const response = await axios.post('/admin/signup', signup); 
       console.log('Signup successful:', response.data);
 
-      // Show success message
+      
       toast.success('Admin Signup successful! Please log in to continue.');
-      navigate('/login'); // Redirect to login page
+      navigate('/login'); 
     } catch (e) {
       console.log('Signup failed:', e.response ? e.response.data : e.message);
       toast.error('Signup failed. Please check your details and try again.');
