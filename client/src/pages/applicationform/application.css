@@ -82,6 +82,9 @@ label {
 .form-submit-btn {
   background-color: #5e81f4;
   color: white;
+  margin-bottom: 60px;
+  margin-top: 50px;
+  margin-left: 40px;
   border: none;
   padding: 12px 20px;
   font-size: 16px;

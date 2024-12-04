@@ -11,6 +11,7 @@ import Postedjob from './pages/postedjobs';
 import Application from './pages/applicationform';
 import Candidatedetails from './pages/candidatedetails'
 import Postjob from './pages/post a job';
+import Postjobadmin from './pages/post a job admin'
 import Employershome from './pages/employers';
 import './App.css'
 
@@ -30,6 +31,8 @@ function App() {
 <Route path="/postedjob" element={<Postedjob/>} /> 
 <Route path="/applicationform" element={<Application/>} /> 
 <Route path="/postjob" element={<Postjob/>} /> 
+<Route path="/postjobadmin" element={<Postjobadmin/>} /> 
+
 <Route path="/employerhome" element={<Employershome/>} /> 
 <Route path="/adminsignup" element={<Adminsignup/>} /> 
 

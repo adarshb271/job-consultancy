@@ -1,11 +1,30 @@
 .navbar{
   
     h1{
-        color: white;
+        color: rgb(248, 241, 241);
       
     }
 }
 .me-auto{
-    margin-left: 500px;
+    margin-left: 400px;
     gap: 50px;
+    color: rgb(213, 215, 161);
+    p{
+        margin-top: 20px;
+        color: rgb(241, 243, 177);
+    }
+    p:hover{
+        color :white;
+    }
+}
+ 
+.nav-link {
+ color: rgb(225, 221, 147); 
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+.nav-link.active {
+  color: rgb(242, 242, 198);  
+  text-decoration: underline; 
 }

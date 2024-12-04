@@ -3,6 +3,7 @@ import { Navigate, useNavigate } from 'react-router-dom';
 
 // import Sidebar from '../../components/admindashboard'
 import Navbar from '../../components/adminnavbar'
+import Footer from '../../components/footer';
 import { Button, Flex } from 'antd';
 
 
@@ -22,7 +23,7 @@ const Adminhome=()=>{
   <br />
   <br />
     <Button  onClick={()=>{
-navigate(`/postjob`)
+navigate(`/postjobadmin`)
 } } className='postjobbutton' variant="solid">
  Post A Job
 </Button>
@@ -31,7 +32,7 @@ navigate(`/postjob`)
     <img src="./images/content2.jpg" alt="" />
   </div>
 </div>
-
+<Footer />
 </div>
 
     )
