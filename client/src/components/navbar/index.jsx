@@ -1,64 +1,36 @@
+
+
 import React from 'react';
 import './navbar.css';
-import { Navigate, useNavigate } from 'react-router-dom';
-
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
-
   const navigate = useNavigate();
+  const location = useLocation(); 
+  const isActive = (path) => location.pathname === path ? 'active' : '';
 
-  return(
+  return (
     <div className="navbar">
-        <div className="navmain">
-<div className="logo">
-  <h6>JOBBIZ</h6>
-  <p>JOB Solution</p>
-<img src="" alt="" />
-
-</div>
-<div className="details">
-<ul  onClick={()=>{
-navigate(`/`)
-} }>Home</ul>
-
-{/* <ul  onClick={()=>{
-navigate(`/login`)
-}  }>Candidate</ul> */}
-
-<ul onClick={()=>{
-navigate(`/employerhome`)
-} }>Employer</ul>
-
-<ul onClick={()=>{
-navigate(`/adminlogin`)
-} }>Admin</ul>
-
-
-{/* <button className="btn btn-primary">Signup</button> */}
-{/* <button onClick={()=>{
-navigate(`/login`)
-} }  className="buttonlogin">Login</button>
-<button onClick={()=>{
-navigate(`/user/signup`)
-} }  className="buttonregister">Register</button> */}
-
-</div>
-
-
+      <div className="navmain">
+        <div className="logo">
+          <h6>JOBBIZ</h6>
+          <p>JOB Solution</p>
+          <img src="" alt="" />
         </div>
-
-
-
-
-
-
-
-
-
-
-
+        <div className="details">
+          <ul className={isActive('/')} onClick={() => navigate(`/`)}>
+            Home
+          </ul>
+          <ul className={isActive('/employerhome')} onClick={() => navigate(`/employerhome`)}>
+            Employer
+          </ul>
+          <ul className={isActive('/adminlogin')} onClick={() => navigate(`/adminlogin`)}>
+            Admin
+          </ul>
+        </div>
+      </div>
     </div>
-)
+  );
 };
 
 export default Navbar;

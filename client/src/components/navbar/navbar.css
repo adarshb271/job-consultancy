@@ -117,3 +117,33 @@ margin-left: 500px;
     font-size: 12px;
   }
 }
+.details ul {
+  cursor: pointer;
+  padding: 10px;
+}
+
+.details ul.active {
+  text-decoration: underline; 
+  font-weight: bold;  
+}
+
+.details ul:hover {
+  text-decoration: underline;  
+}
+.details ul {
+  cursor: pointer;
+  padding: 10px;
+  color: antiquewhite;
+
+}
+
+.details ul.active {
+  text-decoration: underline;
+  font-weight: bold;
+  color: white;  
+}
+
+.details ul:hover {
+  text-decoration: underline;
+  color: white; 
+}

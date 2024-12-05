@@ -28,7 +28,7 @@ const AdminLogin = () => {
       localStorage.setItem('id', response.data.id);
 
       toast.success('Login successful! Redirecting to admin dashboard...');
-      navigate('/adminhome/');
+      navigate('/adminhome');
     } catch (e) {
       console.log('Email id or Password is incorrect');
       console.log(e);

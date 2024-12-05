@@ -20,6 +20,7 @@ const Adminnavbar = () => {
       <Navbar bg="dark" data-bs-theme="dark">
         <Container>
           <h1>Jobbiz</h1>
+          <div className="adminname"></div>
           <Nav className="me-auto">
             <NavLink
               to="/adminhome"

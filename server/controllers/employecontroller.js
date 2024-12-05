@@ -15,7 +15,7 @@
 
 module.exports.postJob = async (req, res) => {
   try {
-    const { title,name,phonenumber,email,skills, noofvaccency, description, company, location, salary, postedBy } = req.body;
+    const { title,name,phonenumber,email,skills, noofvaccency, description, company, location, salary, postedBy,postedon } = req.body;
 
     const newJob = new Job({
       title,
@@ -28,7 +28,8 @@ module.exports.postJob = async (req, res) => {
       phonenumber,
       email,
       skills, 
-      noofvaccency
+      noofvaccency,
+      postedon,
     });
 
     await newJob.save();

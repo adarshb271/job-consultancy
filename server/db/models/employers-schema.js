@@ -47,6 +47,10 @@ const jobSchema = new mongoose.Schema(
       type: String,
       // required: true,
     },
+    postedon: {
+      type: String,
+      // required: true,
+    },
   },
   { timestamps: true }
 );

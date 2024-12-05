@@ -18,6 +18,7 @@ const PostJobForm = () => {
     location: '',
     salary: '',
     postedBy: '',
+    postedon:'',
   });
 
   const handleChange = (e) => {
@@ -128,6 +129,16 @@ const PostJobForm = () => {
           onChange={handleChange}
           required
         />
+       {/* <label htmlFor="postedon">Posted On:</label> */}
+        <input
+          type="date"
+          name="postedon"
+          placeholder="Date"
+          value={jobData.postedon}
+          onChange={handleChange}
+          required
+        />
+
         <button type="submit">Post Job</button>
       </form>
       <Footer />

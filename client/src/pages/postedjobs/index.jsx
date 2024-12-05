@@ -37,15 +37,23 @@ return(
               <p><strong>Location:</strong> {job.location}</p>
               <p><strong>Salary:</strong> {job.salary}</p>
               <p><strong>Company:</strong> {job.company}</p>
+              <p><strong>Posted On:</strong> 
+  {job.postedon ? 
+    !isNaN(new Date(job.postedon)) ? 
+      new Date(job.postedon).toLocaleDateString() : 'Invalid Date' 
+    : 'No date provided'
+  }
+</p>
 
-              <p><strong>Posted On:</strong> {new Date(job.postedby).toLocaleDateString()}</p>
+              {/* <p><strong>Posted On:</strong> {new Date(job.postedon).toLocaleDateString()}</p> */}
               <p><strong>name:</strong> {job.name}</p>
               <p><strong>email:</strong> {job.email}</p>
               <p><strong>phone number:</strong> {job.phonenumber}</p>
               <p><strong>Skills:</strong> {job.skills}</p>
               <p><strong>No Of Vaccency:</strong> {job.noofvaccency}</p>
           
-             
+              <p><strong>postedBy:</strong> {job.postedBy}</p>
+
               {/* <button className="apply-btn" Lin>
                   Apply
                 </button> */}

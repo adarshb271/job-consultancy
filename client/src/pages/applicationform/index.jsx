@@ -381,6 +381,23 @@ const ApplicationForm = () => {
           />
         </div>
         <div className="form-group">
+  <label htmlFor="gender">Gender:</label>
+  <select
+    name="gender"
+    id="gender"
+    value={formData.gender}
+    onChange={handleChange}
+    required
+    className="form-input"
+  >
+    <option value="">Select Gender</option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+    <option value="Other">Other</option>
+  </select>
+</div>
+
+        {/* <div className="form-group">
           <label htmlFor="gender">Gender:</label>
           <input
             type="text"
@@ -391,7 +408,7 @@ const ApplicationForm = () => {
             required
             className="form-input"
           />
-        </div>
+        </div> */}
         <div className="form-group">
           <label htmlFor="state">State:</label>
           <input
@@ -440,7 +457,7 @@ const ApplicationForm = () => {
             className="form-input"
           />
         </div>
-        <div className="form-group">
+        {/* <div className="form-group">
           <label htmlFor="experience">Experience:</label>
           <input
             type="text"
@@ -451,7 +468,26 @@ const ApplicationForm = () => {
             required
             className="form-input"
           />
-        </div>
+        </div> */}
+        <div className="form-group">
+  <label htmlFor="experience">Experience:</label>
+  <select
+    name="experience"
+    id="experience"
+    value={formData.experience}
+    onChange={handleChange}
+    required
+    className="form-input"
+  >
+    <option value="">Select Experience</option>
+    <option value="0 to 6 months">0 to 6 months</option>
+    <option value="0 to 6 months">0.6 to 1year</option>
+    <option value="1 to 2 years">1 to 2 years</option>
+    <option value="2 to 3 years">2 to 3 years</option>
+    <option value="above 3 years">Above 3 years</option>
+  </select>
+</div>
+
         <div className="form-group">
           <label htmlFor="qualification">Qualification:</label>
           <input
@@ -464,7 +500,7 @@ const ApplicationForm = () => {
             className="form-input"
           />
         </div>
-        <div className="form-group">
+        {/* <div className="form-group">
           <label htmlFor="skills">Skills:</label>
           <input
             type="text"
@@ -475,7 +511,21 @@ const ApplicationForm = () => {
             required
             className="form-input"
           />
-        </div>
+        </div> */}
+        <div className="form-group">
+  <label htmlFor="skills">Skills:</label>
+  <textarea
+    name="skills"
+    id="skills"
+    value={formData.skills}
+    onChange={handleChange}
+    required
+    className="form-input"
+    rows="5"  // Adjust the number of rows (height)
+    cols="50" // Adjust the number of columns (width)
+  />
+</div>
+
         <div className="form-group">
           <label htmlFor="district">District:</label>
           <input
@@ -507,6 +557,7 @@ const ApplicationForm = () => {
       {/* ToastContainer to render toast notifications */}
       <ToastContainer />
     </div>
+    
   );
 };
 

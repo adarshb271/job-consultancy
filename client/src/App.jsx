@@ -4,6 +4,7 @@ import Home from './pages/home'
 // import Login from './pages/login'
 // import Userhome from './pages/userhome'
 // import UserSignup from './pages/signupuser';
+// /import PDF from './pages/terms nd condition'
 import Adminsignup from './pages/adminsignup'
 import Adminhome from './pages/adminhome';
 import Adminlogin from './pages/adminlogin';
@@ -35,6 +36,7 @@ function App() {
 
 <Route path="/employerhome" element={<Employershome/>} /> 
 <Route path="/adminsignup" element={<Adminsignup/>} /> 
+{/* <Route path="/pdf" element={<PDF/>} />  */}
 
 <Route path="/candidatedetails" element={<Candidatedetails/>} /> 
 
