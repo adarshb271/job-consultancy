@@ -27,6 +27,10 @@
     h1{
         font-style: normal;
     }
+    button{
+      width: 40%;
+      border-radius: 30px;
+    }
 }
 @keyframes slideIn {
     from {

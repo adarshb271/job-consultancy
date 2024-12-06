@@ -54,10 +54,20 @@ const Adminnavbar = () => {
             >
               Add New Admin
             </NavLink>
+            <NavLink
+              to="/forgotpassword"
+              className={({ isActive }) =>
+                isActive ? 'nav-link active' : 'nav-link'
+              }
+            >
+            resetpassword
+            </NavLink> 
+           
             <Nav.Link onClick={logout} href="">
               Logout
             </Nav.Link>
           </Nav>
+         
         </Container>
       </Navbar>
     </div>

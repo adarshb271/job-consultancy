@@ -8,33 +8,33 @@ const applicationSchema = mongoose.Schema(
   {
     firstname: {
       type: String,
-      // required: true,
+      required: true,
       trim: true,
     },
    
     email: {
       type: String,
-      // required: true,
+      required: true,
       unique: true,
-      // trim: true,
+      trim: true,
     },
     mobilenumber: {
       type: String,
-      // required: true,
+       required: true,
       trim: true,
     },
     dob: {
       type: Date,
-      // required: true,
+      //  required: true,
     },
     gender: {
       type: String,
-      // enum: ['Male', 'Female', 'Other'],
-      // required: true,
+      enum: ['Male', 'Female', 'Other'],
+      required: true,
     },
     address: {
       type: String,
-      // required: true,
+       required: true,
       trim: true,
     },
 
@@ -45,7 +45,7 @@ const applicationSchema = mongoose.Schema(
       
       district: {
         type: String,
-        // required: true,
+        //  required: true,
         trim: true},
     
     pincode: {

@@ -56,8 +56,11 @@ const AdminLogin = () => {
           <Input type="password" onChange={e => onChange(e, 'password')} />
         </div>
         <Button className='adminlogin' onClick={onLogin}>Login</Button>
-       
+        <p>
+            <Link to="/forgotpassword/admin"> forgotpassword ?</Link>
+          </p>
       </div>
+    
       <Footer />
     </div>
   );

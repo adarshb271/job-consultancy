@@ -83,20 +83,6 @@ module.exports.loginAdmin = async (req, res) => {
 
 
 
-
-
-  
-
-  
-
-
-
-
-
-
-
-
-
 module.exports.forgotPassword = async (req, res) => {
   const { email } = req.body;
 
@@ -120,7 +106,7 @@ module.exports.forgotPassword = async (req, res) => {
       from: process.env.MAIL,  
       to: email, 
       subject: 'Password Reset',
-      text: `Please reset your password by clicking on the link: http://localhost:${process.env.PORT}/admin/reset/${resetToken}`,
+      text: `Please reset your password by clicking on the link: ${resetToken}`,
     };
 
     
@@ -137,38 +123,59 @@ module.exports.forgotPassword = async (req, res) => {
   }
 };
 
+// module.exports.resetPassword = async (req, res) => {
+//   const { token } = req.params;
+//   const { password, confirmpassword } = req.body;
+
+//   try {
+//     const decoded = jwt.verify(token, process.env.ADMINKEY);
+
+//     if (password !== confirmpassword) {
+//       return res.status(400).json({ message: 'Passwords do not match.' });
+//     }
+
+//     const hashedPassword = await bcrypt.hash(password, 10);  
+
+//     const admin = await Admin.findOneAndUpdate(
+//       { email: decoded.email },
+//       { password: hashedPassword },
+//       { new: true }  
+//     );
+
+//     if (!admin) {
+//       return res.status(400).json({ message: 'User not found.' });
+//     }
+
+   
+//     return res.status(200).json({ message: 'Password reset successfully.' });
+//   } catch (err) {
+//     if (err.name === 'TokenExpiredError') {
+//       return res.status(401).json({ message: 'Token has expired. Please request a new password reset.' });
+//     }
+
+//     console.error(err);
+//     return res.status(400).json({ message: 'Invalid or malformed token.' });
+//   }
+// };
+
 module.exports.resetPassword = async (req, res) => {
   const { token } = req.params;
   const { password, confirmpassword } = req.body;
 
   try {
-    const decoded = jwt.verify(token, process.env.ADMINKEY);
-
-    if (password !== confirmpassword) {
-      return res.status(400).json({ message: 'Passwords do not match.' });
+    const isValid = jwt.verify(token, process.env.ADMINKEY);
+    if (password != confirmpassword) {
+      return res.status(201).json({ message: 'Passwords doesnt match' });
     }
 
-    const hashedPassword = await bcrypt.hash(password, 10);  
-
+    const email = isValid.email;
+    const hashedpassword = await bcrypt.hash(password, 2);
     const admin = await Admin.findOneAndUpdate(
-      { email: decoded.email },
-      { password: hashedPassword },
-      { new: true }  
+      { email: email },
+      { password: hashedpassword }
     );
-
-    if (!admin) {
-      return res.status(400).json({ message: 'User not found.' });
-    }
-
-   
-    return res.status(200).json({ message: 'Password reset successfully.' });
-  } catch (err) {
-    if (err.name === 'TokenExpiredError') {
-      return res.status(401).json({ message: 'Token has expired. Please request a new password reset.' });
-    }
-
-    console.error(err);
-    return res.status(400).json({ message: 'Invalid or malformed token.' });
+    res.status(201).json({ message: 'password reset suceesfully' });
+  } catch (e) {
+    res.status(401).json({ message: 'invalid Token' });
   }
 };
-

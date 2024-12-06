@@ -1,16 +1,21 @@
 .navbar{
+ 
+    background-color: black;
   
     h1{
+        width: 200px;
         color: rgb(248, 241, 241);
       
     }
 }
 .me-auto{
-    margin-left: 400px;
+ 
+    margin-left: 100px;
     gap: 50px;
     color: rgb(213, 215, 161);
     p{
         margin-top: 20px;
+      
         color: rgb(241, 243, 177);
     }
     p:hover{
