@@ -10,10 +10,10 @@ const Navbar = () => {
   const isActive = (path) => location.pathname === path ? 'active' : '';
 
   return (
-    <div className="navbar">
-      <div className="navmain">
+    <div className="navbar1">
+      <div className="navmain1">
         <div className="logo">
-          <h6>JOBBIZ</h6>
+          <h6>JOBBIZ </h6>
           <p>JOB Solution</p>
           <img src="" alt="" />
         </div>
