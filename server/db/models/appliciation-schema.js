@@ -47,6 +47,11 @@ const applicationSchema = mongoose.Schema(
         type: String,
         //  required: true,
         trim: true},
+        
+        jobtitle: {
+          type: String,
+          //  required: true,
+          trim: true},
     
     pincode: {
       type: String,

@@ -40,9 +40,10 @@ const AdminLogin = () => {
   
   return (
     <div className="adminbackgroundimage">
+      <div className="adminlogin1">
       <ToastContainer />
-      <Navbar />
-      <div className="login">
+    <Navbar/>
+      <div className="login1">
         <h1>Admin Login</h1>
         <div className="emailcontainer">
           <label>Email</label>
@@ -60,7 +61,7 @@ const AdminLogin = () => {
             <Link to="/forgotpassword/admin"> forgotpassword ?</Link>
           </p>
       </div>
-    
+    </div>
       <Footer />
     </div>
   );

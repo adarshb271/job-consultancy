@@ -19,6 +19,7 @@ import ForgotPassword from './pages/forgotpassword';
 import ResetPassword from './pages/resetpassword';
 import ForgotPasswordadmin from './pages/forgotpassword admin';
 import ResetPasswordadmin from './pages/resetpasswordadmin';
+import Postedjobforuser from './pages/postedjobforuser';
 import './App.css'
 
 function App() {
@@ -48,6 +49,8 @@ function App() {
 <Route path="/forgotpassword" element={<ForgotPassword/>} /> 
 <Route path="/resetpassword" element={<ResetPassword />} />
 <Route path="/postedjob" element={<Postedjob/>} /> 
+<Route path="/postedjobforuser" element={<Postedjobforuser/>} /> 
+
 <Route path="/candidatedetails" element={<Candidatedetails/>} /> 
 <Route path="/adminsignup" element={<Adminsignup/>} /> 
 <Route path="/adminhome" element={<Adminhome/>} /> 

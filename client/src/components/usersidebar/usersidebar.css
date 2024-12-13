@@ -1,0 +1,35 @@
+.usersidebar{
+    height: 700px;
+    width: 400px;
+
+   background-color: rgb(222, 222, 220);
+    /* position: fixed; */
+   
+}
+.jobtype{
+   margin-top: 150px;
+    h4{
+        margin-left: 90px;
+       
+    }
+}
+.experience{
+    h4{
+        margin-top: 20px;
+        margin-left: 90px;
+       
+    }
+}
+.postedtime{
+    h4{
+        margin-top: 20px;
+        margin-left: 90px;
+       
+    }
+}
+
+
+.form-check{
+    margin-left: 90px;
+    margin-top: 10px;
+}

@@ -6,8 +6,8 @@ const { authenticate } = require('../middleware/userauth');
 const router = express.Router();
 
 router.get('/',controller.getUser)
-router.post('/signupuser',controller.signupUser)
-router.post('/loginuser',controller.loginUser)
+// router.post('/signupuser',controller.signupUser)
+// router.post('/loginuser',controller.loginUser)
 router.get('/:id', controller.getUserById);
 router.get('/posted',controller. getPostedJobs);
 

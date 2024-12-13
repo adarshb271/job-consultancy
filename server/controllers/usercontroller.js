@@ -16,72 +16,72 @@ module.exports.getUser = async (req, res) => {
  
 
   
-  module.exports.signupUser = async (req, res) => {
-    try {
-      // Check if the email already exists
-      const existingUser = await User.findOne({ email: req.body.email });
-      if (existingUser) {
-        return res.status(409).json({ message: 'Email already exists. Please choose another one.' });
-      }
+  // module.exports.signupUser = async (req, res) => {
+  //   try {
+  //     // Check if the email already exists
+  //     const existingUser = await User.findOne({ email: req.body.email });
+  //     if (existingUser) {
+  //       return res.status(409).json({ message: 'Email already exists. Please choose another one.' });
+  //     }
   
-      // Hash the password before saving
-      const hashedPassword = await bcrypt.hash(req.body.password, 10);
+  //     // Hash the password before saving
+  //     const hashedPassword = await bcrypt.hash(req.body.password, 10);
   
-      // Create the new user
-      const newUser = await User.create({
-        ...req.body,
-        password: hashedPassword,
-      });
+  //     // Create the new user
+  //     const newUser = await User.create({
+  //       ...req.body,
+  //       password: hashedPassword,
+  //     });
   
-      // Email setup using nodemailer
-      let transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-          user: process.env.MAIL, 
-          pass: process.env.PASSWORD,
-        },
-      });
+  //     // Email setup using nodemailer
+  //     let transporter = nodemailer.createTransport({
+  //       service: 'gmail',
+  //       auth: {
+  //         user: process.env.MAIL, 
+  //         pass: process.env.PASSWORD,
+  //       },
+  //     });
   
-      // Set the email options
-      let mailOptions = {
-        from: process.env.MAIL,
-        to: req.body.email,
-        subject: 'Welcome to job conselting ',
-        text: `Dear User, \n\nYour account has been successfully created on job conselting App. \n\nYou can login using your email: ${req.body.email} and password: ${req.body.password}.\n\nPlease change your password after logging in for better security.`,
-      };
+  //     // Set the email options
+  //     let mailOptions = {
+  //       from: process.env.MAIL,
+  //       to: req.body.email,
+  //       subject: 'Welcome to job conselting ',
+  //       text: `Dear User, \n\nYour account has been successfully created on job conselting App. \n\nYou can login using your email: ${req.body.email} and password: ${req.body.password}.\n\nPlease change your password after logging in for better security.`,
+  //     };
   
-      // Send the email
-      await transporter.sendMail(mailOptions);
+  //     // Send the email
+  //     await transporter.sendMail(mailOptions);
   
-      // Respond with success message
-      return res.status(201).json({
-        message: 'User registered successfully, and email sent with login credentials.',
-        user: newUser,
-      });
+  //     // Respond with success message
+  //     return res.status(201).json({
+  //       message: 'User registered successfully, and email sent with login credentials.',
+  //       user: newUser,
+  //     });
   
-    } catch (err) {
-      console.error('Signup error:', err);
-      return res.status(500).json({ message: 'Server error during signup', error: err.message });
-    }
-  };
+  //   } catch (err) {
+  //     console.error('Signup error:', err);
+  //     return res.status(500).json({ message: 'Server error during signup', error: err.message });
+  //   }
+  // };
   
-  module.exports.loginUser = async (req, res) => {
-    const { email } = req.body;
-    const user = await User.findOne({ email: email });
-    if (!user) {
-      return res.status(403).json({ message: 'Email is incorrect' });
-    }
-    const isMatching = await bcrypt.compare(req.body.password, user.password);
-    if (!isMatching) {
-      return res.status(403).json({ message: 'Incorrect Password' });
-    }
+  // module.exports.loginUser = async (req, res) => {
+  //   const { email } = req.body;
+  //   const user = await User.findOne({ email: email });
+  //   if (!user) {
+  //     return res.status(403).json({ message: 'Email is incorrect' });
+  //   }
+  //   const isMatching = await bcrypt.compare(req.body.password, user.password);
+  //   if (!isMatching) {
+  //     return res.status(403).json({ message: 'Incorrect Password' });
+  //   }
   
-    const token = jwt.sign({ id: user._id, role: 'user' }, process.env.USERKEY, {
-      expiresIn: '365d',
-    });
+  //   const token = jwt.sign({ id: user._id, role: 'user' }, process.env.USERKEY, {
+  //     expiresIn: '365d',
+  //   });
   
-    res.status(200).json({ message: 'You Are Logged In', token, id: user._id });
-  };
+  //   res.status(200).json({ message: 'You Are Logged In', token, id: user._id });
+  // };
 
 
 

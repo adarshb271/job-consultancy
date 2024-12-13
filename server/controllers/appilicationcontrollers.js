@@ -84,7 +84,7 @@ module.exports.submitApplication = async (req, res) => {
   const { email, mobilenumber, firstname, address,
          gender, state, panchayath, pincode,
          currentlocation, experience, qualification,
-         skills, district } = req.body;
+         skills, district,jobtitle } = req.body;
 
   // Get the file name from the uploaded file
   const fileName = req.file ? req.file.filename : null; 
@@ -114,6 +114,7 @@ module.exports.submitApplication = async (req, res) => {
       qualification,
       skills,
       district,
+      jobtitle,
       file: filePath,  // Store the relative file path here
     });
 

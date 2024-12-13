@@ -24,10 +24,10 @@ const Postedjob = ()=>{
   
   
 return(
-    <div className="postedjob">
+    <div className="postedjob1">
         <Navbar/>
-        <div className="main-content">
-      <h1>Posted Jobs</h1>
+        <div className="main-content1">
+        <h1>Posted Jobs</h1>
       <div className="jobs-container">
         {postedJobs.length > 0 ? (
           postedJobs.map((job) => (

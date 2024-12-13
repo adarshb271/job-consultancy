@@ -1,19 +1,34 @@
-.postjob {
+.postjob{
     /* max-width: 1000px; */
     /* margin: 50px auto; */
     /* padding: 20px; */
-    background: #f9f9f9;
+    /* background: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: Arial, sans-serif;
-    h2{
-      margin-top: 30px;
+    font-family: Arial, sans-serif; */
+   
+    /* height: 900px; */
+    background-color: aqua;
+    margin-top: 0px;
+   
+  }
+
+.form-group5{
+  margin-left: 200px;
+width: 700px;
+label{
+  margin-left: 200px;
+}
+
+}
+   .postjobcompany{
+    margin-top: -0px;
+  h2{
+      margin-top: -100px;
     }
 
-    
-  }
-  
-  .postjob h2 {
+  } 
+ .postjob h2 {
     text-align: center;
     color: #333;
     margin-bottom: 20px;
@@ -24,7 +39,7 @@
     flex-direction: column;
   }
   
-  .postjob input,
+  /* .postjob input,
   .postjob textarea,
   .postjob button {
     margin-bottom: 15px;
@@ -35,18 +50,18 @@
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-  }
-.postjob button{
+  } */
+/* .postjob button{
   width: 50%;
   margin-bottom: 50px;
-}
+} */
   
   .postjob textarea {
     resize: none;
     height: 100px;
   }
   
-  .postjob button {
+  /* .postjob button {
     background-color: #007bff;
     color: white;
     border: none;
@@ -56,7 +71,7 @@
   
   .postjob button:hover {
     background-color: #0056b3;
-  }
+  } */
   
   .postjob input:focus,
   .postjob textarea:focus {
@@ -64,4 +79,41 @@
     outline: none;
     box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
   }
+  .postjob form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
   
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-group input, .form-group textarea {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #45a049;
+  }
+   
+
+   

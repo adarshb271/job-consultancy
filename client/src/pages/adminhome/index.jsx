@@ -1,8 +1,7 @@
 import './adminhome.css'
 import { Navigate, useNavigate } from 'react-router-dom';
 
-// import Sidebar from '../../components/admindashboard'
-import Navbar from '../../components/adminnavbar'
+import Navbaradmin from '../../components/adminnavbar'
 import Footer from '../../components/footer';
 import { Button, Flex } from 'antd';
 
@@ -11,9 +10,10 @@ const Adminhome=()=>{
   const navigate = useNavigate();
  
     return(
-<div className="adminhome">
-    {/* <Sidebar/> */}
-    <Navbar/>
+<div className="adminhome3">
+  
+    <Navbaradmin/>
+    <div className="admin3">
 
     <div className="jobposting">
   <div className="jobleft">
@@ -31,6 +31,7 @@ navigate(`/postjobadmin`)
   <div className="jobright">
     <img src="./images/content2.jpg" alt="" />
   </div>
+</div>
 </div>
 <Footer />
 </div>

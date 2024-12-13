@@ -5,18 +5,18 @@ const userSchema = mongoose.Schema(
     {
         firstname: {
             type: String,
-            required: true,  // Making firstname required
+            // required: true,  // Making firstname required
             trim: true,      // Automatically removes extra spaces
         },
         lastname: {
             type: String,
-            required: true,  // Making lastname required
+            // required: true,  // Making lastname required
             trim: true,      // Automatically removes extra spaces
         },
 
         email: {
             type: String,
-            required: true,   // Making email required
+            // required: true,   // Making email required
             unique: true,     // Ensures the email is unique
             trim: true,       // Automatically removes extra spaces
             // match: [/\S+@\S+\.\S+/, 'is invalid'],  // Validates email format
@@ -34,16 +34,16 @@ const userSchema = mongoose.Schema(
         },
         DOB: {
             type: Date,
-            required: true,  // Making DOB required
+            // required: true,  // Making DOB required
         },
         gender: {
             type: String,
             enum: ['Male', 'Female', 'Other'],  // Enum ensures only these values are allowed
-            required: true,  // Making gender required
+            // required: true,  
         },
         address: {
             type: String,
-            required: true,  // Making address required
+            // required: true,  // Making address required
             trim: true,      // Automatically removes extra spaces
         },
         confirmpassword: {

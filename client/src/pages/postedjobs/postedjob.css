@@ -1,14 +1,23 @@
+
+.postedjob1{
+  margin-top: 30px;
+}
+
 .jobs-container {
-    width: 100%;
+ margin-left: 20px;
+    /* width: 100%; */
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
     gap: 20px;
-
-    max-width: 800px; /* Limit the width of the jobs container */
+    max-width: 1500px; /* Limit the width of the jobs container */
   }
-  .main-content{
-    width: 1500px;
+  .main-content1{
+    width: 90%;
     margin-left: 0px;
+    align-items: center;
+
+  margin-left: 30px;
+  margin-right: 300px;
   }
   
   .job-card {

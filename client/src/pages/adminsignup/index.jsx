@@ -51,11 +51,14 @@ const AdminSignUp = () => {
   };
 
   return (
-    <div className="admin">
-        <Adminnavbar/>
+    <div className="admin5">
       <ToastContainer />
+      <div className="signupadm">
+      <Adminnavbar/>
       <div className="adminSignup">
         <div className="signup-container">
+          <br />
+          <br />
           <h2>Admin Sign Up</h2>
 
           {/* Form Fields */}
@@ -113,6 +116,7 @@ const AdminSignUp = () => {
           Already have an account? Please{' '}
           <Link to="/login">Login</Link>
         </p> */}
+      </div>
       </div>
     </div>
   );

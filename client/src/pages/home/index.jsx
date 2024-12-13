@@ -22,7 +22,9 @@ const Home=()=>{
   <h5>that you deserve.</h5>
   <div className="search">
 <input type="text"  placeholder='job tittle'/>
-<button>submit</button>
+<button onClick={() => {
+              navigate(`/postedjobforuser`);
+            }}  >submit</button>
  
   </div>
  </div>
@@ -39,23 +41,31 @@ const Home=()=>{
   <div className="contentcategory">
     <p>Explore by category</p>
 
-    <button >Explore All</button>
+    <button onClick={() => {
+              navigate(`/postedjobforuser`);
+            }} >Explore All</button>
   
   </div>
 
 
   <div className="cardcategoryup">
-  <div className="business">
+  <div  onClick={() => {
+              navigate(`/postedjobforuser`);
+            }}className="business">
     <img src="./images/bsns.png" alt="" />
  <h5>   Bussiness Development</h5>
  <p>200 Vacancy</p>
   </div>
-  <div className="business">
+  <div onClick={() => {
+              navigate(`/postedjobforuser`);
+            }} className="business">
     <img src="./images/developer.jpg" alt="" />
  <h5>  Developer</h5>
  <p>200 Vacancy</p>
   </div>
-  <div className="business">
+  <div onClick={() => {
+              navigate(`/postedjobforuser`);
+            }} className="business">
     <img src="./images/market.png" alt="" />
  <h5>   Markrting & Management</h5>
  <p>200 Vacancy</p>
@@ -64,7 +74,9 @@ const Home=()=>{
   
     </div>
     <div className="cardcategoryupp">
-  <div className="business">
+  <div onClick={() => {
+              navigate(`/postedjobforuser`);
+            }} className="business">
     <img src="./images/sale.png" alt="" />
  <h5>   Sales & Communication</h5>
  <p>200 Vacancy</p>
@@ -74,7 +86,9 @@ const Home=()=>{
  <h5>  Project Management</h5>
  <p>200 Vacancy</p>
   </div>
-  <div className="business">
+  <div onClick={() => {
+              navigate(`/postedjobforuser`);
+            }} className="business">
     <img src="./images/custumer.png" alt="" />
  <h5>  Custumer service</h5>
  <p>200 Vacancy</p>
@@ -113,7 +127,9 @@ const Home=()=>{
 <div className="featuredjob">
   <div className="featuredjobhead">
     <h2>Featured Jobs</h2>
-    <button>Explore All</button>
+    <button onClick={() => {
+              navigate(`/postedjobforuser`);
+            }} >Explore All</button>
   </div>
   <div className="featuredjobcardup">
   <div className="featuredjobcard">
@@ -122,7 +138,9 @@ const Home=()=>{
     <h6>Product Designer</h6>
     <p>We are looking for Enrollment Advisors who are looking to take 30-35 appointments per week. All leads are pre-scheduled.</p>
    
-   <button>Apply now</button>
+   <button onClick={() => {
+              navigate(`/postedjobforuser`);
+            }} >Apply now</button>
     </div>
     <div className="featuredjobcard">
     <img src="./images/air.png" alt="" />
@@ -130,8 +148,9 @@ const Home=()=>{
     <h6>UI/UX Designer</h6>
     <p>We are looking for Enrollment Advisors who are looking to take 30-35 appointments per week. All leads are pre-scheduled.</p>
    
-   <button>Apply now</button>
-
+    <button onClick={() => {
+              navigate(`/postedjobforuser`);
+            }} >Apply now</button>
     </div>
     <div className="featuredjobcard">
     <img src="./images/shopify.png" alt="" />
@@ -139,8 +158,9 @@ const Home=()=>{
     <h6>iOS Developer</h6>
     <p>We are looking for Enrollment Advisors who are looking to take 30-35 appointments per week. All leads are pre-scheduled.</p>
    
-   <button>Apply now</button>
-    </div>
+    <button onClick={() => {
+              navigate(`/postedjobforuser`);
+            }} >Apply now</button>    </div>
   </div>
 
   <div className="featuredjobcardup">
@@ -150,8 +170,9 @@ const Home=()=>{
     <h6>Creative Director</h6>
     <p>We are looking for Enrollment Advisors who are looking to take 30-35 appointments per week. All leads are pre-scheduled.</p>
    
-   <button>Apply now</button>
-    </div>
+    <button onClick={() => {
+              navigate(`/postedjobforuser`);
+            }} >Apply now</button>    </div>
     <div className="featuredjobcard">
     <img src="./images/oculus.png" alt="" />
     <p>Oculus</p>
@@ -159,8 +180,9 @@ const Home=()=>{
     <p>We are looking for Enrollment Advisors who are looking to take 30-35 appointments per week. All leads are pre-scheduled.
 
 </p>
-   <button>Apply now</button>
-
+<button onClick={() => {
+              navigate(`/postedjobforuser`);
+            }} >Apply now</button>
     </div>
     <div className="featuredjobcard">
     <img src="./images/tata.png" alt="" />
@@ -168,8 +190,9 @@ const Home=()=>{
     <h6>Marketing Manager</h6>
     <p>We are looking for Enrollment Advisors who are looking to take 30-35 appointments per week. All leads are pre-scheduled.</p>
    
-   <button>Apply now</button>
-    </div>
+    <button onClick={() => {
+              navigate(`/postedjobforuser`);
+            }} >Apply now</button>    </div>
   </div>
 
 </div>
