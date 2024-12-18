@@ -33,13 +33,18 @@
     /* margin-top: 250px; */
     margin-left: 120px;
   }
-  
+  h4{
+    margin-top: -70px;
+    margin-left: 450px;
+    font-size: 60px;
+    color: rgb(100, 69, 215);
+  }
 }
 .search{
   gap: 30px;
   margin-top: 30px;
   input{
-    margin-left: 150px;
+    margin-left: 120px;
     width: 300px;
     height: 50px;
     border: 0px;
@@ -54,7 +59,7 @@
   }
   button:hover {
     background-color: #84de7f;
-   
+   border-radius: 30px;
   }
 }
 .startright{
@@ -265,7 +270,7 @@ img{
 
 
   .location{
-    height: 600px;
+    height: 500px;
     width: 100%;
     iframe{
       margin-top: 50px;

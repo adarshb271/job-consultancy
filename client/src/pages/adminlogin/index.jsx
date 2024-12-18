@@ -43,8 +43,11 @@ const AdminLogin = () => {
       <div className="adminlogin1">
       <ToastContainer />
     <Navbar/>
+    {/* <img src="./images/logo.png" alt="" /> */}
+    <h3> </h3>
       <div className="login1">
-        <h1>Admin Login</h1>
+        <h1>Welcome</h1>
+        <h6>PLEASE LOGIN TO ADMIN DASHBOARD</h6>
         <div className="emailcontainer">
           <label>Email</label>
           <Input

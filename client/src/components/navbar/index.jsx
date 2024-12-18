@@ -13,19 +13,19 @@ const Navbar = () => {
     <div className="navbar1">
       <div className="navmain1">
         <div className="logo">
-          <h6>JOBBIZ </h6>
+          <h6>JOB  </h6><h5>BIZ</h5>
           <p>JOB Solution</p>
           <img src="" alt="" />
         </div>
         <div className="details">
           <ul className={isActive('/')} onClick={() => navigate(`/`)}>
-            Home
+           <h6>Home</h6> 
           </ul>
           <ul className={isActive('/employerhome')} onClick={() => navigate(`/employerhome`)}>
-            Employer
+           <h6> Employer</h6>
           </ul>
           <ul className={isActive('/adminlogin')} onClick={() => navigate(`/adminlogin`)}>
-            Admin
+           <h6>  Admin</h6>
           </ul>
         </div>
       </div>

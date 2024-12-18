@@ -18,10 +18,10 @@ const Home=()=>{
 <Navbar/>
 <div className="homestart">
  <div className="startleft">
-  <h6>Find the perfect job</h6>
+  <h6>Find the perfect  <h4>job</h4></h6> 
   <h5>that you deserve.</h5>
   <div className="search">
-<input type="text"  placeholder='job tittle'/>
+<input type="text"  placeholder='     Job tittle'/>
 <button onClick={() => {
               navigate(`/postedjobforuser`);
             }}  >submit</button>

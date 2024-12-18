@@ -52,16 +52,16 @@ const Adminnavbar = () => {
                 isActive ? 'nav-link active' : 'nav-link'
               }
             >
-              Add New Admin
+              Add new admin
             </NavLink>
-            <NavLink
+            {/* <NavLink
               to="/forgotpassword"
               className={({ isActive }) =>
                 isActive ? 'nav-link active' : 'nav-link'
               }
             >
             resetpassword
-            </NavLink> 
+            </NavLink>  */}
            
             <Nav.Link onClick={logout} href="">
               Logout

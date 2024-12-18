@@ -7,8 +7,8 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-left">
-          <h2>JobBiz Solutions</h2>
-          <p>&copy; 2024 JobBiz Solutions. All Rights Reserved.</p>
+          <h2>Jobbiz Solutions</h2>
+          <p>&copy; 2024 Jobbiz Solutions. All Rights Reserved.</p>
           <p>NSS Taluk Union Building,Fort Maidan,Palakkad, Kerala.</p>
           <div className="footer-contact">
             <p>Phone: +91 123 456 7890</p>

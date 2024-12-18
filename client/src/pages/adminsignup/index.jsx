@@ -56,10 +56,11 @@ const AdminSignUp = () => {
       <div className="signupadm">
       <Adminnavbar/>
       <div className="adminSignup">
+     
         <div className="signup-container">
           <br />
           <br />
-          <h2>Admin Sign Up</h2>
+          <h2>Sign Up</h2>
 
           {/* Form Fields */}
           <div className="form-group">
